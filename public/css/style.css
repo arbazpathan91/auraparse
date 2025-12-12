@@ -1,0 +1,92 @@
+/* =========================================
+   1. Custom Animations
+   ========================================= */
+
+@keyframes spin { 
+  to { transform: rotate(360deg); } 
+}
+.animate-spin-slow { 
+  animation: spin 3s linear infinite; 
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in { 
+  animation: slideInUp 0.4s ease-out forwards; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { 
+  animation: fadeIn 0.3s ease-out forwards; 
+}
+
+/* Toast Entry Animation */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* =========================================
+   2. Custom Scrollbars (Sleek)
+   ========================================= */
+
+/* Base Width */
+.custom-scrollbar::-webkit-scrollbar { 
+  width: 6px; 
+  height: 6px; 
+}
+
+/* Track (Transparent) */
+.custom-scrollbar::-webkit-scrollbar-track { 
+  background: transparent; 
+}
+
+/* Thumb (Light Mode) */
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 3px; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { 
+  background: #94a3b8; /* slate-400 */
+}
+
+/* Thumb (Dark Mode) */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: #334155; /* slate-700 */
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover { 
+  background: #475569; /* slate-600 */
+}
+
+/* =========================================
+   3. Theme Transitions
+   ========================================= */
+
+/* Ensures background/border changes are smooth when toggling Light/Dark */
+body, div, nav, button, input, select, textarea, span {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* =========================================
+   4. Toast Notification System
+   ========================================= */
+
+/* Container: Sits on top but lets clicks pass through empty space */
+#toast-container {
+    pointer-events: none;
+}
+
+/* Individual Toast: Captures clicks and slides in */
+.toast-item {
+    pointer-events: auto;
+    animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-left-width: 4px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AuraParse</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-gray-800 font-sans leading-relaxed">
+
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Header -->
+        <header class="mb-12 pb-6 border-b border-gray-200">
+            <div class="flex items-center gap-2 mb-2">
+                <img src="logo.svg" class="w-12 h-12" alt="AuraParse Logo">
+                <h1 class="text-2xl font-bold text-gray-900">AuraParse</h1>
+            </div>
+            <a href="/privacy.html" target="_blank" class="hover:text-indigo-600 transition-colors">Privacy Policy</a>
+            <p class="text-gray-500 mt-2">Last Updated: December 2, 2025</p>
+        </header>
+
+        <!-- Content -->
+        <div class="space-y-8">
+            
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">1. Introduction</h3>
+                <p>Welcome to <strong>AuraParse</strong> ("we," "our," or "us"), a product owned and operated by <strong>Simpaira Ltd</strong>. We are committed to protecting your privacy and ensuring the security of your data. This Privacy Policy explains how we handle your information when you use our API services.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">2. Data We Collect</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Account Information:</strong> When you sign up via Google or Email, we collect your email address to create your unique API key and manage your account quotas.</li>
+                    <li><strong>Usage Data:</strong> We track API request metrics (timestamp, status codes, and request count) to enforce rate limits and generate billing usage reports.</li>
+                    <li><strong>API Keys:</strong> We generate and store API keys. For security, we store a <strong>hashed</strong> version of your key and the last 4 digits for identification. We do not store your full API key.</li>
+                </ul>
+            </section>
+
+            <section class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                <h3 class="text-xl font-bold text-blue-900 mb-3">3. How We Handle Receipt Data (Important)</h3>
+                <p class="mb-2">We adhere to a strict <strong>Transient Processing</strong> policy regarding the receipt images you send to our API:</p>
+                <ul class="list-disc pl-5 space-y-2 text-blue-800">
+                    <li><strong>In-Memory Processing:</strong> Receipt images sent to the `/extract` endpoint are processed in temporary memory (RAM) only.</li>
+                    <li><strong>No Storage:</strong> We <strong>do not store, archive, or save</strong> your receipt images or the extracted JSON text in any database or file storage system.</li>
+                    <li><strong>Immediate Deletion:</strong> Once the API response is returned to you, the data is immediately discarded from our processing servers.</li>
+                    <li><strong>AI Processing:</strong> Data is processed using Google Cloud Vertex AI/Gemini Enterprise API. Google does not use this data to train their models.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">4. Google User Data</h3>
+                <p>If you choose to sign in with Google, we access your email address and basic profile information solely for authentication purposes. We strictly do not sell, rent, or share your Google user data with third parties.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">5. Data Retention</h3>
+                <p>We retain your account information (email and usage stats) as long as your account is active. You may request account deletion at any time, upon which all your personal data will be permanently removed from our systems.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">6. GDPR Compliance (EU Users)</h3>
+                <p>If you are located in the European Economic Area (EEA), you have specific rights regarding your personal data:</p>
+                <ul class="list-disc pl-5 space-y-1 mt-2">
+                    <li><strong>Right to Access:</strong> You can see your usage data directly in your dashboard.</li>
+                    <li><strong>Right to Erasure:</strong> You can request full deletion of your account and associated data.</li>
+                    <li><strong>Right to Rectification:</strong> You can update your information by contacting support.</li>
+                </ul>
+                <p class="mt-2">Our legal basis for processing is <strong>contractual necessity</strong> (to provide the API service) and <strong>legitimate interest</strong> (fraud prevention and security).</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">7. Third-Party Subprocessors</h3>
+                <p>We use trusted third-party services to operate our infrastructure:</p>
+                <ul class="list-disc pl-5 space-y-1 mt-2">
+                    <li><strong>Google Cloud Platform (USA/EU):</strong> Hosting, Database, and AI processing.</li>
+                    <li><strong>Stripe (USA):</strong> Payment processing. We do not store credit card details.</li>
+                    <li><strong>Firebase Auth (USA):</strong> Secure authentication management.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">8. Contact Us</h3>
+                <p>For any privacy-related questions or to exercise your GDPR rights, please contact:</p>
+                <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+                    <p class="font-bold">Simpaira Ltd</p>
+                    <p>Email: <a href="mailto:info@simpaira.com" class="text-indigo-600 hover:underline">info@simpaira.com</a></p>
+                </div>
+            </section>
+
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-12">
+            <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-slate-500 dark:text-slate-400">
+                © 2025 <span class="font-semibold text-slate-700 dark:text-slate-300">Simpaira Ltd</span>. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+                <a href="/privacy.html" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</a>
+                <a href="/terms.html" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</a>
+                <a href="mailto:info@simpaira.com" class="flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> info@simpaira.com</a>
+            </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "promptmail"
+  },
+  "targets": {
+    "promptmail": {
+      "hosting": {
+        "app": ["auraparse"]
+      }
+    }
+  }
+}

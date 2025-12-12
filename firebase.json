@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "target": "app",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      { "source": "/api/**", "run": { "serviceId": "receipt-scanner", "region": "us-central1" } },
+      { "source": "/docs", "run": { "serviceId": "receipt-scanner", "region": "us-central1" } },
+      { "source": "/openapi.json", "run": { "serviceId": "receipt-scanner", "region": "us-central1" } },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
+}

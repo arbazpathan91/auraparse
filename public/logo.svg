@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scanGradient" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Container -->
+  <rect width="512" height="512" rx="128" fill="url(#scanGradient)" opacity="0.1"/>
+  
+  <!-- The 'A' Shape made of scan lines -->
+  <path d="M256 96 L96 416 H176 L256 256 L336 416 H416 L256 96 Z" fill="url(#scanGradient)"/>
+  
+  <!-- Scan Beam -->
+  <rect x="64" y="280" width="384" height="24" rx="12" fill="#4F46E5" opacity="0.5"/>
+</svg>

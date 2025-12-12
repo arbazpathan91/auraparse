@@ -1,0 +1,38 @@
+Receipt Scanner API Deployment
+================================
+
+Deployed: Tue Dec  2 16:36:44 GMT 2025
+Project ID: promptmail
+Region: us-central1
+Service Name: receipt-scanner
+Service Account: receipt-scanner-sa@promptmail.iam.gserviceaccount.com
+
+Backend:
+  Service URL: https://receipt-scanner-3hcqi6rfsa-uc.a.run.app
+  API Endpoint: https://receipt-scanner-3hcqi6rfsa-uc.a.run.app/api/v1/extract
+  Documentation: https://receipt-scanner-3hcqi6rfsa-uc.a.run.app/docs
+
+Frontend:
+  Main App: https://scanreceipt-ai.web.app/
+  Pricing: https://scanreceipt-ai.web.app/pricing.html
+  Admin: https://scanreceipt-ai.web.app/admin.html
+
+Secrets Created:
+  - gemini-api-key
+  - api-keys
+  - stripe-secret-key (if provided)
+  - stripe-webhook-secret (if provided)
+  - admin-secret
+  - cron-secret
+
+Admin Secret (for admin dashboard):
+Check Secret Manager
+
+To view logs:
+gcloud run services logs read receipt-scanner --region us-central1 --project promptmail
+
+To update:
+./deploy.sh
+
+To rollback:
+gcloud run services update-traffic receipt-scanner --to-revisions=PREVIOUS_REVISION=100 --region us-central1 --project promptmail

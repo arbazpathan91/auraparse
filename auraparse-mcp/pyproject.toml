@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "auraparse-mcp"
+version = "0.1.0"
+description = "Official MCP Server for AuraParse - The AI Financial Document Intelligence API"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Simpaira Ltd", email = "info@simpaira.com" },
+]
+dependencies = [
+  "mcp",
+  "httpx"
+]
+
+[project.scripts]
+# This creates the terminal command 'auraparse-mcp'
+auraparse-mcp = "auraparse_mcp.server:main"
+
+[project.urls]
+Homepage = "https://auraparse.web.app"
+
+[tool.hatch.build]
+# Only include code found in the src folder
+include = [
+  "src/auraparse_mcp"
+]
+
+# Explicitly ignore the virtual environment and junk files
+exclude = [
+  "venv",
+  ".git",
+  "__pycache__",
+  "*.pyc"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/auraparse_mcp"]
